@@ -3,7 +3,7 @@
 **[[Run Online]](https://codecentral.devexpress.com/e2945/)**
 <!-- run online end -->
 
-This example demonstrates how to create a data table and a grid control at runtime and use the grid's server-side events to update the data table.
+This example demonstrates how to create a data table and grid control at runtime and use the grid's server-side events to update the data table.
 
 ![Edit a data table stored in ViewState](EditDataTableInViewState.png)
 
@@ -34,7 +34,7 @@ private DataTable CustomDataSourse {
 }
 ```
 
-Create a grid control at runtime and set its [EnableCallbacks](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxGridBase.EnableCallBacks) property to `false` to enable the postback mode. This mode allows you to store data in a ViewState.
+Create a grid control at runtime and set its [EnableCallbacks](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxGridBase.EnableCallBacks) property to `false` to enable postback mode. This mode allows you to store data in a ViewState.
 
 ```cs
 private void CreateGrid() {
