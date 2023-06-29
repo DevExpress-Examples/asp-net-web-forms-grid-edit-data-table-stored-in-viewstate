@@ -1,6 +1,6 @@
 # Grid View for ASP.NET Web Forms - How to edit a data table stored in a ViewState
 <!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/e2945/)**
+**[[Run Online]](https://codecentral.devexpress.com/128539743/)**
 <!-- run online end -->
 
 This example demonstrates how to create a data table and grid control at runtime and use the grid's server-side events to update the data table.
