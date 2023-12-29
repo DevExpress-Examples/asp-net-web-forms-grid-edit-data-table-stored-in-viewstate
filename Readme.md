@@ -10,9 +10,6 @@
 * [Default.aspx.cs](./CS/WebSite/Default.aspx.cs) (VB: [Default.aspx.vb](./VB/WebSite/Default.aspx.vb))
 <!-- default file list end -->
 # How to edit data in a DataTable using ASPxGridView at runtime when data is stored in ViewState
-<!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/128539743/)**
-<!-- run online end -->
 
 
 <p>This example shows how to insert, edit and delete data in a data table by using ASPxGridView. The data table and the grid are created at runtime.<br />To be able to store data in <strong>ViewState</strong>, the <a href="https://documentation.devexpress.com/#AspNet/DevExpressWebASPxGridView_EnableCallBackstopic">ASPxGridView.EnableCallBacks</a> property should be set to <strong>False</strong>. Refer to the <a href="https://www.devexpress.com/Support/Center/p/K18387">K18387: The Concept of Callbacks</a> article for additional details.<br /><br /></p>
