@@ -66,8 +66,9 @@ Partial Public Class _Default
 
 
 	Protected Sub grid_RowDeleting(ByVal sender As Object, ByVal e As ASPxDataDeletingEventArgs)
-		Dim id As Integer = CInt(Math.Truncate(e.Keys(0)))
-		Dim dr As DataRow = CustomDataSourse.Rows.Find(id)
+'INSTANT VB NOTE: The variable id was renamed since Visual Basic does not handle local variables named the same as class members well:
+		Dim id_Conflict As Integer = CInt(Math.Truncate(e.Keys(0)))
+		Dim dr As DataRow = CustomDataSourse.Rows.Find(id_Conflict)
 		dataTable.Rows.Remove(dr)
 
 		Dim g As ASPxGridView = TryCast(sender, ASPxGridView)
@@ -75,8 +76,9 @@ Partial Public Class _Default
 		e.Cancel = True
 	End Sub
 	Protected Sub grid_RowUpdating(ByVal sender As Object, ByVal e As ASPxDataUpdatingEventArgs)
-		Dim id As Integer = CInt(Math.Truncate(e.OldValues("Id")))
-		Dim dr As DataRow = CustomDataSourse.Rows.Find(id)
+'INSTANT VB NOTE: The variable id was renamed since Visual Basic does not handle local variables named the same as class members well:
+		Dim id_Conflict As Integer = CInt(Math.Truncate(e.OldValues("Id")))
+		Dim dr As DataRow = CustomDataSourse.Rows.Find(id_Conflict)
 		dr(0) = e.NewValues("Id")
 		dr(1) = e.NewValues("Data")
 
@@ -122,10 +124,11 @@ Partial Public Class _Default
 	End Sub
 
 	Private Sub grid_RowValidating(ByVal sender As Object, ByVal e As ASPxDataValidationEventArgs)
-		Dim id As Integer = CInt(Math.Truncate(e.NewValues("Id")))
-		If (Not e.OldValues.Contains("Id") OrElse (CInt(Math.Truncate(e.OldValues("Id"))) <> id)) AndAlso (CustomDataSourse.Rows.Find(id) IsNot Nothing) Then
+'INSTANT VB NOTE: The variable id was renamed since Visual Basic does not handle local variables named the same as class members well:
+		Dim id_Conflict As Integer = CInt(Math.Truncate(e.NewValues("Id")))
+		If (Not e.OldValues.Contains("Id") OrElse (CInt(Math.Truncate(e.OldValues("Id"))) <> id_Conflict)) AndAlso (CustomDataSourse.Rows.Find(id_Conflict) IsNot Nothing) Then
 			Dim grid As ASPxGridView = TryCast(sender, ASPxGridView)
-			e.Errors(grid.Columns("Id")) = String.Format("Column 'Id' is constrained to be unique.  Value '{0}' is already present.", id)
+			e.Errors(grid.Columns("Id")) = String.Format("Column 'Id' is constrained to be unique.  Value '{0}' is already present.", id_Conflict)
 		End If
 	End Sub
 	Private Sub UpdateData(ByVal g As ASPxGridView)
