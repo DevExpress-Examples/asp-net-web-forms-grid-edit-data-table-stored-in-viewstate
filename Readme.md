@@ -74,7 +74,7 @@ private void UpdateData(ASPxGridView g) {
 * [Grid View for ASP.NET Web Forms - How to edit a data table stored in a session](https://github.com/DevExpress-Examples/aspxgridview-how-to-edit-data-in-a-datatable-at-runtime-when-data-is-stored-in-session-t191009)
 * [Grid View for ASP.NET Web Forms - How to edit an in-memory data set with a master-detail relationship](https://github.com/DevExpress-Examples/aspxgridview-edit-in-memory-dataset)
 <!-- feedback -->
-## Does This Example Address Your Development Requirements/Objectives?
+## Does this example address your development requirements/objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=asp-net-web-forms-grid-edit-data-table-stored-in-viewstate&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=asp-net-web-forms-grid-edit-data-table-stored-in-viewstate&~~~was_helpful=no)
 
